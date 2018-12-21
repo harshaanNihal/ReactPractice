@@ -33,7 +33,7 @@ class App extends Component {
   }
   addList = (item) => {
     this.setState({lists: [item, ...this.state.lists]
-    })
+    }) 
   }
   handleChange = (idData) => {
     let value = this.state.lists.map(v => {
@@ -70,8 +70,8 @@ class App extends Component {
   }
 
   render() {
-    let notDone = this.searchArray.filter( v => !v.done);
-    let done = this.searchArray.filter(v => v.done);
+    let notDone = this.state.lists.filter( v => !v.done);
+    let done = this.state.lists.filter(v => v.done);
     return (
       <div className="wrapper">
         <NewItem addList = {this.addList} />
