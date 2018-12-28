@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Calculation from './Reducers/Calculation';
+import { Calculation } from './Reducers/Calculation';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 
