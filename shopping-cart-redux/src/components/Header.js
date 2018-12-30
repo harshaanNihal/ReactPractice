@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { shortLowToHigh, shortHighToLow } from '../action/action';
+import { shortLowToHigh, shortHighToLow, updateProductList } from '../action/action';
 
 let mapStateToProps = state => {
   return state;
@@ -9,6 +9,9 @@ let mapStateToProps = state => {
 class Header extends Component {
   handleSelect = (e) => {
     let value = e.target.value;
+    if(value === "select"){
+      return this.props.dispatch(updateProductList(this.props.productListCopy));
+    }
     if(value === "Price Low to High"){
       console.log("called action")
         return this.props.dispatch(shortLowToHigh());

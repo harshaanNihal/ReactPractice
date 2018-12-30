@@ -5,7 +5,6 @@ import Product from './Product'
 let mapStateToProps = state => {
   return state;
 }
-
 class Products extends Component {
   render(){
     return (

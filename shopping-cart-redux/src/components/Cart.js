@@ -14,6 +14,12 @@ class Cart extends Component {
       isShowing: !this.state.isShowing
     })
   }
+  handlePrice = () => {
+    alert(this.props.cart.reduce((acc, value) => {
+      acc = acc + value.price;
+      return acc;
+    }, 0))
+  }
   render(){
     return(
       <div className = "cart" onClick = {this.handleCart}>
@@ -31,6 +37,15 @@ class Cart extends Component {
                   )
               })
             }
+            <h5>Total Price:  
+            {
+              this.props.cart.reduce((acc, value) => {
+                acc = acc + value.price;
+                return acc;
+              }, 0)
+            }
+            </h5>
+            <button onClick = {this.handlePrice}>Checkout</button>
             </div>
           ) : `C${this.props.cart.length}`
         }

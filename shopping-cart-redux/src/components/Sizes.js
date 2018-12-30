@@ -8,21 +8,16 @@ let mapStateToProps = state => {
 class Sizes extends Component {
   render(){
     return(
-        <Fragment>
-        <div className = "sizes">
-          {
-            this.props.productListCopy.reduce((acc, value) => {
-              value.availableSizes.forEach(value2 => {
-                if(!acc.includes(value2)) acc.push(value2);
-              })
-              return acc;
-          }, []).map((value, index) => {
-            return (<button key = {index}>{value}</button>)
+      <Fragment>
+      <div className = "sizes">
+        {
+          this.props.sizeArr.map((value, index) => {
+            return <button key = {index} onClick = {() => this.props.handleClick(index)}>{value}</button>
           })
-          }
-        </div>
-        </Fragment>
-      )
+        }
+      </div>
+      </Fragment>
+    )
   }
 }
 export default connect(

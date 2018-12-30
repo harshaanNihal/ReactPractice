@@ -13,6 +13,11 @@ export function shortLowToHigh(){
     type: "LOWTOHIGH"
   }
 }
+export function updateProductList(updatevalue){
+  return {
+    type: "UPDATEDATA",updatevalue
+  }
+}
 export function addCart(id){
   return {
     type: "ADDCART", id

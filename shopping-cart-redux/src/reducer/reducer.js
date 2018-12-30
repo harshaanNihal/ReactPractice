@@ -26,6 +26,11 @@ export default function shopping(state = initialState, action){
         ...state, 
         cart: [...state.cart,...[...state.productList].splice(action.id, 1)]
     }
+    case "UPDATEDATA": 
+      return {
+        ...state, 
+        productList: action.updatevalue
+      }
     default:
       return state;
   }
