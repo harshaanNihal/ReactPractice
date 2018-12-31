@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { updateCart } from '../action/action';
 
 let mapStateToProps = state => {
   return state;
@@ -20,6 +21,9 @@ class Cart extends Component {
       return acc;
     }, 0))
   }
+  updateCartItem = (id) => {
+    this.props.dispatch(updateCart(id))
+  }
   render(){
     return(
       <div className = "cart" onClick = {this.handleCart}>
@@ -27,12 +31,13 @@ class Cart extends Component {
           (this.state.isShowing) ? (
             <div className = "cart__items">
             {
-              this.props.cart.map(value => {
+              this.props.cart.map((value, index) => {
                 return (
                   <div className = "cart__item">
                     <img alt="cartItem" src = {require(`../images/${value.sku}_1.jpg`)}></img>
                     <span>{value.title}</span>
                     <span>{value.price}</span>
+                    <button onClick = {()=>this.updateCartItem(index)}>X</button>
                   </div>
                   )
               })

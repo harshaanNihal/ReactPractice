@@ -23,3 +23,8 @@ export function addCart(id){
     type: "ADDCART", id
   }
 }
+export function updateCart(id){
+  return {
+    type: "UPDATECART", id
+  }
+}

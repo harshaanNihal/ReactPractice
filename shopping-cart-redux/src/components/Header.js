@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { shortLowToHigh, shortHighToLow, updateProductList } from '../action/action';
+import propTypes from 'prop-types';
+import {defaultProps} from 'prop-types';
 
 let mapStateToProps = state => {
   return state;
 }
 
 class Header extends Component {
+  static defaultProps = {
+    name : "Sachin kumar Tiwari"
+  }
   handleSelect = (e) => {
     let value = e.target.value;
     if(value === "select"){
@@ -33,6 +38,9 @@ class Header extends Component {
         </div>
       )
   }
+}
+Header.propTypes = {
+  productListCopy: propTypes.array
 }
 export default connect(
   mapStateToProps

@@ -1,3 +1,4 @@
+
 let initialState = {
   productList: [],
   productListCopy: [],
@@ -26,6 +27,11 @@ export default function shopping(state = initialState, action){
         ...state, 
         cart: [...state.cart,...[...state.productList].splice(action.id, 1)]
     }
+    case "UPDATECART": 
+      return {
+        ...state, 
+        cart: state.cart.reduce((acc,v,i)=> {if(!(i===action.id))acc.push(v); return acc;},[])
+      }
     case "UPDATEDATA": 
       return {
         ...state, 

@@ -60,7 +60,7 @@ class App extends Component {
         <Cart />
         <Header />
         <main className = "main-wrapper">
-          <Sizes sizeArr = {this.state.sizeArr} handleClick = {this.handleClick} />
+          <Sizes sizeArr = {this.state.sizeArr} sizeTrac = {this.state.sizeTrac} handleClick = {this.handleClick} />
           <Products sizeArr = {this.state.sizeArr} sizeTrac = {this.state.sizeTrac} />
         </main>
       </div>

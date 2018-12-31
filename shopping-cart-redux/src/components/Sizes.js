@@ -12,7 +12,7 @@ class Sizes extends Component {
       <div className = "sizes">
         {
           this.props.sizeArr.map((value, index) => {
-            return <button key = {index} onClick = {() => this.props.handleClick(index)}>{value}</button>
+            return <button className = {(this.props.sizeTrac[index]) ? "white" : "black"} key = {index} onClick = {() => this.props.handleClick(index)}>{value}</button>
           })
         }
       </div>
