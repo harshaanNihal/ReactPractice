@@ -1,0 +1,69 @@
+.App{
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* user show */
+.users {
+  text-align: center;
+}
+.username{
+  padding: 5px 0;
+  background: rgba(166, 221, 221, 0.4);
+  border-radius: 16px;
+}
+.user {
+  display: inline-block;
+  width: 200px;
+  background: rgba(2,3,3,0.4);
+  border-radius: 16px;
+  margin: 10px 5px;
+  padding: 10px 5px;
+}
+.user__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.user__compare__btn{
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 16px;
+  margin: 10px 5px;
+  padding: 5px 10px;
+}
+
+/* compare */
+.compare__list {
+  display: block;
+}
+.userCompare {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto; 
+  align-items: center;
+  width: 100%;
+  background: rgba(2,3,3,0.4);
+  border-radius: 16px;
+  margin: 20px auto;
+  padding: 20px 15px;
+}
+.comparename{
+  display: inline-block;
+  padding: 5px 0;
+}
+
+/* compare Tables */
+.table__container {
+  display: grid;
+  place-items: center;
+}
+table{
+  text-align: center;
+  display: inline-block;
+  border: 2px solid black;
+}
+table td{
+  border : 2px solid gray;
+  padding: 10px 20px;
+  font-size: 22px;
+}

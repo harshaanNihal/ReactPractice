@@ -1,0 +1,17 @@
+body {
+  background: lightgreen;
+  text-align: center;
+}
+.input {
+  width: 295px;
+  height: 50px;
+}
+.buttonElement {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 150px)
+}
+button {
+  height: 40px;
+  font-size: 22px;
+}

@@ -1,0 +1,50 @@
+.App {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+//input type
+.input__field {
+  display: grid;
+  margin:20px 0;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  input {
+    height: 30px;
+  }
+  button {
+    width: 100px;
+  }
+}
+
+// undo and redo
+.undo, .redo {
+  height: 30px;
+  margin: 5px;
+  background: pink;
+  border: none;
+}
+
+
+
+.packed__items{
+
+}
+.packed__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+.unpacked__items{
+  width: 100%;
+}
+.unpacked__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 20px;
+  width: 500px;
+  align-items: center;
+}
