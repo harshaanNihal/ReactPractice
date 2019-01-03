@@ -4,6 +4,14 @@
   text-align: center;
 }
 
+// block wrapper 
+.wrapper{
+  width: 100%;
+  border: 2px solid rgb(255, 119, 141);
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
 //input type
 .input__field {
   display: grid;
@@ -21,15 +29,27 @@
 // undo and redo
 .undo, .redo {
   height: 30px;
+  width: 60px;
   margin: 5px;
-  background: pink;
+  background: rgb(255, 204, 215);
   border: none;
 }
 
+// search
+.search {
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+  height: 30px;
+  border-radius: 20px;
+  padding-left: 10px;
+  outline: none;
+}
 
 
+// packed items
 .packed__items{
-
+  text-align: left;
 }
 .packed__item {
   display: grid;
@@ -39,7 +59,15 @@
   align-items: center;
 }
 .unpacked__items{
+  text-align: left;
   width: 100%;
+}
+h3{
+  background: pink;
+  padding: 5px 0;
+}
+h4{
+  margin: 5px 0;
 }
 .unpacked__item {
   display: grid;

@@ -12,7 +12,13 @@ class Unpacked extends Component {
     return (
       <div className = "unpacked__items">
       <h3>Unpacked Items</h3>
-      {
+      
+      { 
+        this.props.searchUP.length ?         this.props.searchUP.map((value,index) => {
+          if(!value.done){
+             return <UnpackedItem data = {value} key = {index} id = {index} />
+          }
+        }) :
         this.props.totalBags.map((value,index) => {
           if(!value.done){
              return <UnpackedItem data = {value} key = {index} id = {index} />

@@ -23,3 +23,13 @@ export function redo(){
     type: "REDO"
   }
 }
+export function searchUnpacked(value){
+  return {
+    type: "SEARCH_UNPACKED", value
+  }
+}
+export function searchPacked(value){
+  return {
+    type: "SEARCH_PACKED", value
+  }
+}

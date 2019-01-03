@@ -12,7 +12,12 @@ class Packed extends Component {
     return (
       <div className = "packed__items">
       <h3>Packed Items</h3>
-      {
+      { 
+        this.props.searchP.length ?         this.props.searchP.map((value,index) => {
+          if(value.done){
+            return <PackedItem data = {value} key = {index} id = {index} />
+          }
+        }) :
         this.props.totalBags.map((value,index) => {
           if(value.done){
             return <PackedItem data = {value} key = {index} id = {index} />
