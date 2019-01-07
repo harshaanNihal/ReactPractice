@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { shortLowToHigh, shortHighToLow, updateProductList } from '../action/action';
 import propTypes from 'prop-types';
-import {defaultProps} from 'prop-types';
 
 let mapStateToProps = state => {
   return state;

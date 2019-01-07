@@ -1,0 +1,150 @@
+// css reset
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+// header
+
+.header {
+  background:#d1d3d3;
+	padding: 20px 40px;;
+	display: grid;
+	grid-template-columns: 1fr auto;
+  h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+	}
+	input{
+		width: 300px;
+		border-radius: 16px;
+		border:none;
+		padding: 5px 10px;
+		font-size: 22px;
+		outline: none;
+	}
+}
+
+// news filter section
+.news__filter{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	width: 80%;
+	margin: 0 auto;
+	place-items: center;
+	.country__list, .category__list{
+		height: 40px;
+		width: 100%;
+		font-size: 22px;
+		display: block;
+		margin: 10px auto;
+		padding-left: 5px; 
+		border-radius: 16px;
+		outline: none;
+	}
+	.submit {
+		width:100%;
+		height: 40px;
+		border-radius: 16px;
+		border:none;
+		border:1px solid black;
+		font-size: 22px;
+		outline: none;
+	}
+}
+
+
+
+
+
+// news data
+.news__data{
+	width: 90%;
+	margin: 0 auto;
+}
+
+// news card
+.news__card{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 20px;
+	padding: 10px 5px;
+	border: 2px solid black;
+	border-radius: 16px;
+	margin: 5px;
+	img{
+		width:400px;
+		height: 200px;
+	}
+}
+
+// news card data
+.news__card__data {
+	a{
+		display: block;
+		font-size: 32px;
+		margin:15px 0;
+		text-transform: capitalize;
+		color:black;
+		font-weight: 500; 
+		text-shadow: -1px 1px 2px black;
+	}
+	h4{
+		width: 50%;
+		font-size: 22px;
+		display: inline-block;
+	}
+	p{
+		margin-top:10px;
+		font-size: 22px;
+		font-family: cursive;
+	}
+}

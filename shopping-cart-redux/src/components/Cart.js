@@ -24,24 +24,32 @@ class Cart extends Component {
   updateCartItem = (id) => {
     this.props.dispatch(updateCart(id))
   }
+
+
+  // this.props.cart.map((value, index) => {
+                
+    // return (
+    //   <div className = "cart__item">
+    //     <img alt="cartItem" src = {require(`../images/${value.sku}_1.jpg`)}></img>
+    //     <span>{value.title}</span>
+    //     <span>{value.price}</span>
+    //     <span>Quantity: {}</span>
+    //     <button onClick = {()=>this.updateCartItem(index)}>X</button>
+    //   </div>
+    //   )
+  // })
+
   render(){
+    let cartObj = this.props.cart.reduce((acc,val)=>{
+      acc[val.title] ? acc[val.title]+=1 : acc[val.title]=1;
+      return acc;
+    },{});
     return(
       <div className = "cart" onClick = {this.handleCart}>
         {
           (this.state.isShowing) ? (
             <div className = "cart__items">
-            {
-              this.props.cart.map((value, index) => {
-                return (
-                  <div className = "cart__item">
-                    <img alt="cartItem" src = {require(`../images/${value.sku}_1.jpg`)}></img>
-                    <span>{value.title}</span>
-                    <span>{value.price}</span>
-                    <button onClick = {()=>this.updateCartItem(index)}>X</button>
-                  </div>
-                  )
-              })
-            }
+
             <h5>Total Price:  
             {
               this.props.cart.reduce((acc, value) => {
