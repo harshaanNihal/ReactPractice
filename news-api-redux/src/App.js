@@ -41,6 +41,7 @@ class App extends Component {
       country: key
     })
   }
+  
   handleCategory = (e) => {
     this.setState({
       category: e.target.value

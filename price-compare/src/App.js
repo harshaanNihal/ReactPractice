@@ -29,6 +29,7 @@ class App extends Component {
       compareList: [...this.state.compareList, this.state.data[id]]
     })
   }
+  
   deleteCompareList = (id) => {
     if(this.state.compareList.length >= 3){
       this.setState({

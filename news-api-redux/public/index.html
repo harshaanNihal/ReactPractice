@@ -27,6 +27,9 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="overlay">
+      <h3>You are not connected to internet</h3>
+    </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -38,5 +41,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+    let overlay = document.querySelector("#overlay");
+    function online(){
+      overlay.style.display = "none";
+    }
+    function offline(){
+      overlay.style.display = "block";
+    }
+    window.addEventListener("online", online);
+    window.addEventListener("offline", offline);
+
+    </script>
   </body>
 </html>
